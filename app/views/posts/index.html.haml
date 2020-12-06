@@ -1,0 +1,40 @@
+.header
+  .header_main
+    = image_tag "pict/pict-reason-01.jpg",class:"header_main_icon"
+    Nexus Partner
+  .header_nav
+    = link_to "トップページ", "#", class: "top_btn"
+    = link_to "ログイン", "#", class: "btn"
+    = link_to "新規登録", "#", class: "btn"
+.main
+  .topintroduction
+    .concept
+      こんな事で悩んでいませんか？
+    .lists
+      .list
+        .list__pict
+          = image_tag "pict/pict-reason-02.jpg",class:"list__pict__bottom"
+        .list__text
+          動画を載せたいけど
+          %br
+          投稿・編集の仕方が分からない
+      .list
+        .list__pict
+          = image_tag "pict/pict-reason-03.jpg",class:"list__pict__bottom"
+        .list__text
+          動画編集で副収入を得たい!
+    .topintroduction_bottom
+      動画出演者と編集者を繋げるマッチングアプリそれが
+    .topintroduction_main
+      Nexus Partner
+  .visual
+    .visual_content
+      .visual_content_subtitle
+        動画をバズらせたい！
+        %br
+        そのパートナーを見つけ出すアプリ！
+      .log__btn
+        .abtn
+          =link_to image_tag("pict/app.png",class:"bottom editing"),"#"
+        =link_to image_tag("pict/google-play-badge.png",class:"gbtn bottom"),"#"
+
