@@ -3,12 +3,20 @@
     = image_tag "pict/pict-reason-01.jpg",class:"header_main_icon"
     Nexus Partner
   .header_nav
-    = link_to "トップページ", "posts/index", class: "btn"
-    = link_to "ログイン", "#", class: "top_btn"
-    = link_to "新規登録", "#", class: "btn"
+    = link_to "トップページ", root_path, class: "btn"
+    = link_to "ログイン", "sign_in", class: "top_btn"
+    = link_to "新規登録", "sign_up", class: "btn"
 .main
   .topintroduction
-    
+    .from_group
+      %label.label
+        メールアドレス
+      %input{:type => "email", class:"from_control", :name => "session[email]", :id => "session_email"}
+      %label.label
+        パスワード
+      %input{:type => "Password", class:"from_control", :name => "session[email]", :id => "session_email"}
+      =link_to "#" do
+        %button{:type => "submit", :name => "commit", :value => "Log in", class:"from_btn"} sing-in
   .visual
     .visual_content
       .visual_content_subtitle
