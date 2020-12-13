@@ -7,23 +7,22 @@
     = link_to "ログイン", "sign_in", class: "btn"
     = link_to "新規登録", "sign_up", class: "top_btn"
 .main
-  .topintroduction
-    .from_group
-      %label.label
-        ニックネーム
-      %input{:type => "text", class:"from_control", :name => "user[nickname]", :id => "nickname"}
-      %label.label
-        メールアドレス
-      %input{:type => "email", class:"from_control", :name => "user[email]", :id => "email"}
-      %label.label
-        パスワード
-      %input{:type => "Password", class:"from_control", :name => "user[encrypted_password]", :id => "encrypted_password"}
-      %label.label
-        役職
-      %select{class:"from_control", :name => "user[each_split]", :id => "each_split"}
-        
-      =link_to "#" do
-        %button{:type => "submit", :name => "commit", :value => "Log in", class:"from_btn"} Sing-up
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    .topintroduction
+      .from_group
+        %label.label
+          ニックネーム
+        = f.text_field :nickname, class:"from_control"
+        %label.label
+          メールアドレス
+        = f.email_field :email, class:"from_control"
+        %label.label
+          パスワード
+        = f.password_field :encrypted_password, class:"from_control"
+        %label.label
+          役職
+        = f.select :each_split_id, [["出演者", "出演者"], ["編集", "編集"]], include_blank: "選択して下さい", class: "from_control"
+        = f.submit "Sing-up", class:"from_btn"
   .visual
     .visual_content
       .visual_content_subtitle
