@@ -1,0 +1,47 @@
+.header
+  .header_main
+    = image_tag "pict/pict-reason-01.jpg",class:"header_main_icon"
+    Nexus Partner
+- if user_signed_in?
+  .mypage_main
+    .side
+      .list__open
+        = link_to posts_path do
+          %P.list__open__text2 探す
+      .list__open
+        = link_to 'posts/show' do
+          %P.list__open__text1 プロフィール
+      .list__open
+        = link_to destroy_user_session_path , method: :delete  do
+          %P.list__open__text2 ログアウト
+    .center
+      .picupcontainer
+        .probuctbox
+          .probuctbox__listss
+            .probuctbox__product
+              .photos
+                = image_tag "pict/pict-reason-01.jpg", class:"photos_photo"
+                .Table
+                  %table.Table_table
+                    %tbody.tbody
+                      %tr.tr
+                        %th.th 
+                          ニックネーム
+                        %td.td 
+                          あああ
+                      %tr.tr
+                        %th.th 
+                          役職
+                        %td.td
+                          出演者
+                      %tr.tr
+                        %th.th 
+                          イイね
+                        %td.td
+                          1
+                      %tr.tr
+                        %th.th 
+                          ジャンル
+                        %td.td
+                          ゲーム実況
+
